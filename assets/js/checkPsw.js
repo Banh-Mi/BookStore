@@ -6,10 +6,11 @@ const inputEmail = document.querySelector('.input_email input');
 let text = '';
 
 function checkPassword(password, email) {
-    if(email.length === 0) {
-        text = 'Email không được để trống';
-        return false;
-    }
+
+    if(!isValidEmail(email)) {
+        text = 'Email không hợp lệ';
+		return false;
+	}
 
     if(password.length < 8) {
         text = 'Password phải trên 8 ký tự';
@@ -26,8 +27,13 @@ function checkPassword(password, email) {
     return true;
 }
 
+function isValidEmail(email) {
+	const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+	return regex.test(email);
+}
+
 nextBtn.addEventListener("click",(e)=>{
-    if(!checkPassword(inputPassword.value, inputEmail.value)) {
+    if(!checkPassword(inputPassword.value, inputEmail.value) && !document.querySelector(".notification_item")) {
         e.preventDefault();
         let div =  document.createElement('div'); 
         div.classList.add('notification_item');
@@ -44,9 +50,9 @@ nextBtn.addEventListener("click",(e)=>{
                 </div> 
             `
         notificationBox.appendChild(div);
-        setTimeout(()=> {
+        setTimeout(() => {
             div.remove();
-        }, 2000)
+        }, 3000)
         }
             
 })
