@@ -5,57 +5,52 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/css/bootstrap-icons.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
-	<link rel="icon" type="image/x-icon" href="./assets/images/logo.svg">
-	<title>Login</title>
+	<link rel="icon" type="image/x-icon" href="./assets/images/logo_icon.svg">
+	<title>Home Page</title>
 </head>
-<body>
-	<div class="notification">
-		
-	</div>
-	<section class="login">
-		<div class="login_left">
-			<a href="#" class="close_icon">
-				<i class="bi bi-x-lg"></i>
+<body class="home_page">
+		<div class="nav">
+			<a href="./index.html" class="nav_logo">
+				<img src="./assets/images/logo.svg" alt="Logo BookStore" class="">
 			</a>
-			<div class="login_left-title">
-				Login
+			<ul class="nav_menu">
+				<li>
+					<a href="" class="nav_menu-home">Home</a>
+				</li>
+				<li>
+					<a href="" class="nav_menu_about">About</a>
+				</li>
+				<li>
+					<a href="" class="nav_menu-product">Product</a>
+				</li>
+				<li>
+					<a href="" class="nav_menu-contact">Contact</a>
+				</li>
+			</ul>
+			<div class="nav_search">
+				<i class="bi bi-search"></i>
+				<input type="text" class="search_input" placeholder="Search">
 			</div>
-			<form action="" class="login_left-form">
-
-				<div class="form_emai">
-					<label for="">Email</label>
-					<div class="input_email">
-						<input type="email">
-					</div>
-				</div>
-				<div class="form_password">
-					<label for="">Password</label>
-					<div class="input_password">
-						<input type="password">
-						<i class="bi bi-eye-slash-fill"></i>
-					</div>
-				</div>
-
-				<button class="form_button-next">Next</button>
-
-				<div class="or">
-					<span></span>or<span></span>
-				</div>
-
-				<a class="btn-facebook">
-					<img src="./assets/images/facebook_icon.svg" alt=""><p>Facebook</p>
+			<div class="nav_select">
+				<a href="" class="nav_select-cart">
+					<i class="bi bi-bag"></i>
+					<div class="cart_count">0</div>
 				</a>
-				<a class="btn-google">
-					<img src="./assets/images/google_icon.svg" alt=""><p>Google</p>
-				</a>
-				<div class="creat_account">
-					<p>Don’t have an account?</p><a href="./register.html">Sign Up</a>
+				<div class="nav_select-translate">
+					<i class="bi bi-translate"></i>
+					<ul class="dropdown_content">
+						<li>
+							<div href="#"><img src="./assets/images/anh.jpg" alt=""><p>English</p></a>
+						</li>
+						<li>
+							<div href="#"><img src="./assets/images/vietnam.png" alt=""><p>Việt Nam</p></a>
+						</li>
+					</ul>
 				</div>
-			</form>
+			</div>
+			<a href="./login.html" class="nav_login">
+				<i class="bi bi-person-circle"></i>
+			</a>
 		</div>
-		<div class="login_right"></div>
-	</section>
-	<script src="./assets/js/toggleEye.js"></script>
-	<script src="./assets/js/checkPsw.js"></script>
 </body>
 </html>
