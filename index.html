@@ -9,48 +9,57 @@
 	<title>Home Page</title>
 </head>
 <body class="home_page">
-		<div class="nav">
-			<a href="./index.html" class="nav_logo">
-				<img src="./assets/images/logo.svg" alt="Logo BookStore" class="">
-			</a>
-			<ul class="nav_menu">
-				<li>
-					<a href="" class="nav_menu-home">Home</a>
-				</li>
-				<li>
-					<a href="" class="nav_menu_about">About</a>
-				</li>
-				<li>
-					<a href="" class="nav_menu-product">Product</a>
-				</li>
-				<li>
-					<a href="" class="nav_menu-contact">Contact</a>
-				</li>
-			</ul>
-			<div class="nav_search">
-				<i class="bi bi-search"></i>
-				<input type="text" class="search_input" placeholder="Search">
-			</div>
-			<div class="nav_select">
-				<a href="" class="nav_select-cart">
-					<i class="bi bi-bag"></i>
-					<div class="cart_count">0</div>
-				</a>
-				<div class="nav_select-translate">
-					<i class="bi bi-translate"></i>
-					<ul class="dropdown_content">
-						<li>
-							<div href="#"><img src="./assets/images/anh.jpg" alt=""><p>English</p></a>
-						</li>
-						<li>
-							<div href="#"><img src="./assets/images/vietnam.png" alt=""><p>Việt Nam</p></a>
-						</li>
+		<nav class="nav">
+			<div class="nav_bar">
+				<i class="bi bi-list menu_icon"></i>
+				<span class="nav_bar-logo"><a href="./home.html">BookStore</a></span>
+				<div class="nav_bar-menu">
+					<div class="header_logo">
+						<div class="logo_mobile">
+							<a href="#">BookStore</a>
+						</div>
+						<i class="bi bi-x-lg close"></i>
+					</div>
+					
+					<ul class="menu_links">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Product</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
 					</ul>
 				</div>
+				<div class="nav_bar-function">
+					<div class="translate">
+						<i class="bi bi-translate"></i>
+						<div class="language">
+							<span>
+								<img src="./assets/images/vietnam.png" alt="">
+								<p>Việt Nam</p>
+							</span>
+							<span>
+								<img src="./assets/images/anh.jpg" alt="">
+								<p>English</p>
+							</span>
+						</div>
+					</div>
+					<div class="search">
+						<div class="search_toggle">
+							<i class="bi bi-search search_icons"></i>
+							<i class="bi bi-x-lg cancel_icons"></i>
+						</div>
+						<div class="search_input">
+							<input type="text" placeholder="Search">
+							<i class="bi bi-search"></i>
+						</div>
+					</div>
+					<div class="login_icons">
+						<a href="./login.html">
+							<i class="bi bi-person-circle"></i>
+						</a>
+				</div>
+				</div>
 			</div>
-			<a href="./login.html" class="nav_login">
-				<i class="bi bi-person-circle"></i>
-			</a>
-		</div>
+		</nav>
+		<script src="./assets/js/home.js"></script>
 </body>
 </html>
