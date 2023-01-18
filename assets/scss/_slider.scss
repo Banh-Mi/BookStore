@@ -6,7 +6,7 @@
 		width: 100%;
 		display: flex;
 		flex-wrap: nowrap;
-		overflow: hidden;
+		overflow-x: hidden;
 		font-family: var(--font-main);
 		&::-webkit-scrollbar {
 			height: 0;
