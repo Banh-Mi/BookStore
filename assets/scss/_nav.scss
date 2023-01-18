@@ -225,7 +225,7 @@
 				&-menu {
 					position: fixed;
 					height: 100%;
-					width: 280px;
+					width: 320px;
 					left: -100%;
 					top: 0;
 					padding: 20px;
@@ -253,10 +253,10 @@
 					}
 					.menu_links {
 						flex-direction: column;
-						margin-top: 45px;
+						margin-top: 20px;
 						overflow-y: auto;
 						li {
-							margin: 25px 0;
+							margin: 20px 0;
 							width: 100%;
 							text-align: center;
 							border-radius: 5px;
