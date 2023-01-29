@@ -7,14 +7,13 @@
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<link rel="icon" type="image/x-icon" href="./assets/images/logo_icon.svg">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
 	<title>Home Page</title>
 </head>
 <body class="home_page">
 		<nav class="nav">
 			<div class="nav_bar">
 				<i class="bi bi-list menu_icon"></i>
-				<span class="nav_bar-logo"><a href="#">BookStore</a></span>
+				<span class="nav_bar-logo"><a href="./home.html">BookStore</a></span>
 				<div class="nav_bar-menu">
 					<div class="header_logo">
 						<div class="logo_mobile">
@@ -31,19 +30,6 @@
 					</ul>
 				</div>
 				<div class="nav_bar-function">
-					<div class="translate">
-						<i class="bi bi-translate"></i>
-						<div class="language">
-							<span>
-								<img src="./assets/images/vietnam.png" alt="">
-								<p>Việt Nam</p>
-							</span>
-							<span>
-								<img src="./assets/images/anh.jpg" alt="">
-								<p>English</p>
-							</span>
-						</div>
-					</div>
 					<div class="search">
 						<div class="search_toggle">
 							<i class="bi bi-search search_icons"></i>
@@ -54,11 +40,15 @@
 							<i class="bi bi-search"></i>
 						</div>
 					</div>
+					<div class="cart">
+						<i class="bi bi-cart"></i>
+						<span class="number_cart" id="count">0</span>
+					</div>
 					<div class="login_icons">
 						<a href="./login.html">
 							<i class="bi bi-person-circle"></i>
 						</a>
-				</div>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -91,8 +81,13 @@
 					<div class="wrapper">
 						<div class="content">
 							<h1>
-								BookStore - nền tảng đọc sách, nghe sách nói đa nền tảng, đa màn hình, đa thiết bị như máy tính, laptop, smartphone, máy đọc sách...
+								BookStore - Nền tảng trao đổi mua bán sách an toàn, phù hợp với nhiều nền tảng khác nhau
 							</h1>
+							<ul>
+								<li>Hello</li>
+								<li>Hello1</li>
+								<li>Hello1</li>
+							</ul>
 							<div class="button-download">
 								<button class="button-download_android">
 									<i class="fa-brands fa-apple"></i>
@@ -112,29 +107,29 @@
 
 				<div class="carousel-item carousel-item_3">
 					<div class="wrapper">
-						<div class="content">
-							<h1>
-								BookStore - nền tảng đọc sách, nghe sách nói đa nền tảng, đa màn hình, đa thiết bị như máy tính, laptop, smartphone, máy đọc sách...
-							</h1>
-							<div class="button-download">
-								<button class="button-download_android">
-									<i class="fa-brands fa-apple"></i>
-									<a href="#">Cài đặt cho IOS</a>
-								</button>
-								<button class="button-download_ios">
-									<i class="fa-brands fa-google-play"></i>
-									<a href="#">Cài đặt cho Android</a>
-								</button>
-							</div>
+					  <div class="content">
+						<h1>BookStore - nền tảng đọc sách, nghe sách nói đa nền tảng, đa màn hình, đa thiết bị như máy tính, laptop, smartphone, máy đọc sách...</h1>
+						<div class="button-download">
+						  <button class="button-download_ios">
+							<i class="fa-brands fa-apple"></i>
+							<a href="#">Cài đặt cho IOS</a>
+						  </button>
+						  <button class="button-download_android">
+							<i class="fa-brands fa-google-play"></i>
+							<a href="#">Cài đặt cho Android</a>
+						  </button>
 						</div>
-						<div class="content-img">
-							<img src="./assets/images/anh-2.png" alt="">
-						</div>
-					</div>
-				</div>
+					  </div> 
+				  
+					  <div class="content-img"> 
+						<img src="./assets/images/anh-2.png" alt="" /> 
+					  </div> 
+					</div>  									  	  	  	  	  	  	  	  	  	  	  	    
+				  </div> 
 			</div>
 		</div>
 		<script src="./assets/js/home.js"></script>
 		<script src="./assets/js/dragSlider.js"></script>
+		<script src="./assets/js/menu.js"></script>
 </body>
 </html>

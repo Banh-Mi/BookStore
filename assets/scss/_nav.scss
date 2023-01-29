@@ -6,7 +6,7 @@
 		left: 0;
 		height: 70px;
 		width: 100%;
-		background-color: var(--main-color);
+		background-color: var(--white);
 		z-index: 100;
 		&_bar {
 			font-family: var(--font-main);
@@ -15,24 +15,24 @@
 			max-width: 1000px;
 			width: 100%;
 			margin: 0 auto;
-			padding: 0 30px;
+			padding: 0 15px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			.menu_icon {
-				color: var(--white);
+				color: var(--black);
 				font-size: 25px;
 				padding: 5px;
 				cursor: pointer;
 				display: none;
 			}
 			&-logo {
-				font-size: 30px;
+				font-size: 35px;
 				font-weight: bold;
 				a {
-					font-size: 30px;
+					font-size: 35px;
 					font-weight: bold;
-					color: var(--white);
+					color: var(--main-color);
 					text-decoration: none;
 				}
 			}
@@ -45,7 +45,6 @@
 							font-size: 25px;
 							color: var(--white);
 							text-decoration: none;
-
 						}
 					}
 				}
@@ -58,20 +57,23 @@
 						list-style: none;
 						margin: 0 5px;
 						a {
-							color: var(--white);
-							font-size: 20px;
+							color: var(--black);
+							font-size: 18px;
 							text-decoration: none;
-							padding: 10px;
+							padding: 5px 20px;
 							position: relative;
+						}
+						a:hover {
+							color: var(--main-color);
 						}
 						a::before {
 							content: '';
-							left: 50%;
+							left: 28%;
 							position: absolute;
-							height: 6px;
-							width: 6px;
-							border-radius: 50%;
-							background-color: var(--white);
+							height: 2px;
+							width: 35px;
+							border-radius: 5%;
+							background-color: var(--main-color);
 							opacity: 0;
 							bottom: 0;
 							transition: all 0.3s ease;
@@ -85,65 +87,45 @@
 			}
 			&-function {
 				display: flex;
-				.translate, .search_toggle, .login_icons > a {
+				.cart, .search, .login_icons > a {
 					cursor: pointer;
-					color: var(--white);
-					height: 40px;
-					width: 40px;
+					color: var(--black);
+					height: 50px;
+					width: 50px;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					margin: 0 5px;
-					font-size: 22px;
+					margin: 0 10px;
+					font-size: 28px;
 				}
-				.translate {
+				.cart:hover, .search:hover, .login_icons > a:hover {
+					color: var(--main-color);
+				}
+				.cart {
 					position: relative;
-					&.active > .language {
-						opacity: 1;
-						pointer-events: auto;
-					}
-					.language {
-						font-size: 18px;
+					.number_cart {
+						background-color: var(--main-color);
+						width: fit-content;
+						height: fit-content;						
+						padding: 2px 6px;
+						border-radius: 100px;
+						text-align: center;
+						font-size: 10px;
 						position: absolute;
-						bottom: -115px;
-						right: 5px;
-						padding: 10px 20px;
-						width: 170px;
-						border-radius: 6px;
-						box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-						opacity: 0;
-						pointer-events: none;
-						transition: all 0.3s ease;
-						z-index: 100;
-						background-color: var(--white);
-						span {
-							margin: 10px 0px;
-							display: flex;
-							align-items: center;
-							img {
-								width: 30px;
-								height: 20px;
-							}
-							p {
-								font-size: 18px;
-								color: var(--grey-text);
-								margin-left: 10px;
-							}
-						}
-						span:hover > p{
-							color: var(--main-color);
-						}
+						bottom: 25px;
+						right: 1px;
+						color: var(--white);
+						
 					}
 				}
 				.search {
 					position: relative;
 					&_toggle {
 						i {
-							color: var(--white);
-							font-size: 22px;
 							cursor: pointer;
 							transition: all 0.3s ease;
 							position: absolute;
+							bottom:2px;
 						}
 						.search_icons {
 							opacity: 1;
@@ -166,11 +148,11 @@
 								opacity: 1;
 								pointer-events: auto;
 							}
-	
+							
 						}
 					}
 					&_input {
-						border: 3px solid var(--main-color);
+						border: 2px solid var(--main-color);
 						position: absolute;
 						bottom: -75px;
 						right: 5px;
@@ -211,10 +193,11 @@
 			}
 		}
 	}
-
+	
 }
 
-@media only screen and (max-width: 750px) {
+
+@media only screen and (max-width: 850px) {
 	.home_page {
 		.nav {
 			&_bar {
@@ -256,10 +239,14 @@
 						margin-top: 20px;
 						overflow-y: auto;
 						li {
-							margin: 20px 0;
-							width: 100%;
+							margin: 15px 0;
+							width: 55%;
+							padding: 5px 0;
 							text-align: center;
 							border-radius: 5px;
+							a {
+								color: var(--white);
+							}
 							&:hover a::before {
 								opacity: 0;
 							}
@@ -286,7 +273,7 @@
 							width: 280px;
 						}
 					}
-					.translate, .search_toggle, .login_icons>a {
+					.cart, .search_toggle, .login_icons>a {
 						margin: 0;
 					}
 				}

@@ -2,6 +2,9 @@ const carousel = document.querySelector('.carousel');
 const carouselItem = document.querySelector('.carousel-item');
 const carouselItemList = document.querySelectorAll('.carousel-item');
 const btnList = document.querySelectorAll('.button-download button');
+const html = document.querySelector('html');
+const body = document.querySelector('body');
+
 carousel.style.scrollBehavior = 'smooth';
 
 let timerId = 0;
@@ -9,59 +12,82 @@ let start_pagex = 0;
 let prevScrollLeft = 0;
 let rangeX = 0;
 let imgWidth =  carouselItem.clientWidth;
+let checkMouseover = false;
 
 function startDrag(e) {
-    e.stopPropagation();
-    clearInterval(timerId);
     carousel.style.scrollBehavior = 'unset';
     rangeX = (e.pageX ?? e.touches[0].pageX)  - start_pagex;
     carousel.scrollLeft =  prevScrollLeft - rangeX;
 }
 
 function stopDrag(e) {
-    e.stopPropagation();
-    window.removeEventListener('mousemove', startDrag);
+    clearInterval(timerId);
+    carousel.removeEventListener('mousemove', startDrag);
+    carousel.removeEventListener('mouseleave', autoSlide);
     carousel.style.scrollBehavior = 'smooth';
-    autoSlide();
+    rangeX = 0;
     slideAutomatic();
 }
 
-function autoSlide() {
-    rangeX = Math.abs(rangeX);
-    imgWidth =  carouselItem.clientWidth;
-    let valDifference = imgWidth - rangeX;
-
-    if(carousel.scrollLeft > (carousel.scrollWidth - carousel.clientWidth-1)) return;
-    if(carousel.scrollLeft === 0) return; 
-    if(carousel.scrollLeft > prevScrollLeft) return carousel.scrollLeft += rangeX > imgWidth / 3 ? valDifference : -rangeX;
-    return carousel.scrollLeft -= rangeX > imgWidth / 3 ? valDifference : -rangeX;
+function autoSlide(e) {
+    stopDrag(e);
+    for(var i =  carouselItemList.length; i >= 0; i--) {
+        if(carousel.scrollLeft > i*imgWidth) return  carousel.scrollLeft = i * imgWidth;
+    }
 }
 
+carouselItemList.forEach((elem) => {
+    elem.addEventListener('click', function(e) {
+        stopDrag(e);
+        let rect = elem.getClientRects()[0];
+        if(carousel.scrollLeft >= prevScrollLeft) {
+            let restElem = elem.clientWidth + rect.left; 
+            if(restElem >= elem.clientWidth*0.8) return carousel.scrollLeft += rect.left;
+            return carousel.scrollLeft += restElem;
+        } else {
+            let restElem = elem.clientWidth - rect.left; 
+            if(restElem >= elem.clientWidth*0.8) carousel.scrollLeft += rect.left;
+            else carousel.scrollLeft -= restElem;
+        }
+    })
+
+    elem.addEventListener('touchend', function(e) {
+        stopDrag(e);
+        let rect = elem.getClientRects()[0];
+        if(carousel.scrollLeft >= prevScrollLeft) {
+            let restElem = elem.clientWidth + rect.left; 
+            if(restElem >= elem.clientWidth*0.8) return carousel.scrollLeft += rect.left;
+            return carousel.scrollLeft += restElem;
+        } else {
+            let restElem = elem.clientWidth - rect.left; 
+            if(restElem >= elem.clientWidth*0.8) carousel.scrollLeft += rect.left;
+            else carousel.scrollLeft -= restElem;
+        }
+    })
+})
 
 function slideAutomatic() {
     timerId = setInterval(() => {
-        carousel.scrollLeft += imgWidth;
+        carousel.scrollLeft += (carousel.clientWidth + 6);
         if(carousel.scrollLeft > (carousel.scrollWidth - carousel.clientWidth-1)) carousel.scrollLeft = 0; 
     }, 5000);
 }
 
 carousel.addEventListener('mousedown', function(e) {
-    e.stopPropagation();
-    clearInterval(timerId);
     start_pagex = e.pageX;
+    
     prevScrollLeft = carousel.scrollLeft;
-    window.addEventListener('mousemove', startDrag);
-    window.addEventListener('mouseup', stopDrag);
+    carousel.addEventListener('mousemove', startDrag);
+    carousel.addEventListener('mouseup', stopDrag);
+    carousel.addEventListener('mouseleave', autoSlide);
 })
 
 
 carousel.addEventListener('touchstart', function(e) {
-    e.stopPropagation();
-    clearInterval(timerId);
     start_pagex = e.touches[0].pageX;
     prevScrollLeft = carousel.scrollLeft;
-    window.addEventListener('touchmove', startDrag);
-    window.addEventListener('touchend', stopDrag);
+    carousel.addEventListener('touchmove', startDrag);
+    carousel.addEventListener('touchend', stopDrag);
 })
 
 function toggleAnimation(element) {
@@ -74,16 +100,19 @@ function toggleAnimation(element) {
 }
 
 carousel.addEventListener('scroll', function(e) {
-    imgWidth =  carouselItem.clientWidth;
     carouselItemList.forEach((elem) => {
         toggleAnimation(elem);
     })
 })
 
 window.addEventListener('resize', function() {
-    imgWidth =  carouselItem.clientWidth;
+    imgWidth = carousel.clientHeight;
+    console.log(imgWidth);
+    this.clearInterval(timerId);
+    slideAutomatic();
 })
 
 slideAutomatic();
 toggleAnimation(carouselItemList[0]);
+
 

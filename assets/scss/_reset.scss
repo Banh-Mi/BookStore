@@ -17,6 +17,10 @@ body {
 }
 
 img, picture, video, canvas, svg {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
   display: block;
   max-width: 100%;
 }
@@ -34,3 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
   src:url(../fonts/Nunito/static/Nunito-Medium.ttf);
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Medium.ttf)
+}
