@@ -1,0 +1,21 @@
+#menu {
+	display: none;
+	position: absolute;
+	ul {
+		list-style: none;
+		padding: 5px 0px;
+		font-family: var(--font-main);
+		li {
+			width: 120px;
+			text-align: left;
+			background-color: var(--grey-text);
+			padding: 10px 15px;
+			border-bottom: 1px solid var(--white) ;
+			a {
+				width: fit-content;
+				text-decoration: none;
+				color: var(--white);
+			}
+		}
+	}
+}
