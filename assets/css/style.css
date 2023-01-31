@@ -785,6 +785,12 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 25px;
     line-height: 35px;
   }
+  .slider .carousel .carousel-item .wrapper .content ul li {
+    font-size: 12px;
+  }
+  .slider .carousel .carousel-item .wrapper .content-img {
+    width: 80%;
+  }
   .slider .carousel .carousel-item.active .wrapper .content h1 {
     font-size: 25px;
     line-height: 35px;
@@ -797,8 +803,17 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 @media only screen and (max-width: 550px) {
+  .slider .carousel .carousel-item .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .slider .carousel .carousel-item .wrapper .content h1 {
     font-size: 20px;
+    line-height: 35px;
+  }
+  .slider .carousel .carousel-item .wrapper .content-img {
+    width: 80%;
   }
   .slider .carousel .carousel-item.active .wrapper {
     display: flex;
