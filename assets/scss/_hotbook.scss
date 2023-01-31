@@ -1,0 +1,55 @@
+.hot_book {
+	font-family: var(--font-roboto);
+	color: var(--white);
+	.background_bookroom {
+		position: absolute;
+		top: 600px;
+		left: 0;
+		z-index: -1;
+	}
+	.hot_book-box {
+		max-width: 1030px;
+		margin: 0 auto;
+		.title {
+			h1 {
+				letter-spacing: 1px;
+				text-align: center;
+				margin-top: 50px;
+				font-size: 30px;
+				line-height: 1;
+				position: relative;
+				&::before {
+					content: '';
+					left: 48%;
+					position: absolute;
+					height: 10px;
+					width: 50px;
+					border-radius: 5%;
+					opacity: 1;
+					bottom: -25px;
+					background-image: url(../images/line.png);
+				}
+			}
+		}
+		.note {
+			margin-top: 55px;
+			text-align: center;
+			font-size: 14px;
+		}
+		.box_book-content {
+			margin: 40px 0px;
+			.box-row {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 40px;
+				.book_link {
+					&:hover {
+						box-shadow: 0px 0px 20px var(--white);
+					}
+				}
+
+			}
+		}
+	}
+}

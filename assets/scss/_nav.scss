@@ -8,9 +8,9 @@
 		width: 100%;
 		background-color: var(--white);
 		z-index: 100;
+		box-shadow: 0 0 1px #000;
 		&_bar {
 			font-family: var(--font-main);
-			position: relative;
 			height: 100%;
 			max-width: 1000px;
 			width: 100%;
@@ -22,13 +22,10 @@
 			.menu_icon {
 				color: var(--black);
 				font-size: 25px;
-				padding: 5px;
 				cursor: pointer;
 				display: none;
 			}
 			&-logo {
-				font-size: 35px;
-				font-weight: bold;
 				a {
 					font-size: 35px;
 					font-weight: bold;
@@ -40,8 +37,8 @@
 				.header_logo {
 					display: none;
 					.logo_mobile {
-						font-weight: bold;
 						a {
+							font-weight: bold;
 							font-size: 25px;
 							color: var(--white);
 							text-decoration: none;
@@ -87,6 +84,8 @@
 			}
 			&-function {
 				display: flex;
+				justify-content: center;
+				align-items: center;
 				.cart, .search, .login_icons > a {
 					cursor: pointer;
 					color: var(--black);
@@ -205,6 +204,11 @@
 				.menu_icon {
 					display: block;
 				}
+				&-logo {
+					a {
+						font-size: 25px;
+					}
+				}
 				&-menu {
 					position: fixed;
 					height: 100%;
@@ -269,12 +273,14 @@
 				}
 				&-function {
 					.search {
+						top:-5px;
 						&_input {
 							width: 280px;
 						}
 					}
-					.cart, .search_toggle, .login_icons>a {
+					.cart, .search_toggle, .login_icons > a {
 						margin: 0;
+						font-size: 23px;
 					}
 				}
 			}
