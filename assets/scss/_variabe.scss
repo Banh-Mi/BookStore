@@ -1,25 +1,27 @@
 @font-face {
 	font-family: Nunito;
-	src:url(../fonts/Nunito/static/Nunito-Medium.ttf);
-  }
-  
-  @font-face {
+	src: url(../fonts/Nunito/static/Nunito-Medium.ttf);
+}
+
+@font-face {
 	font-family: Roboto;
 	src: url(../fonts/Roboto/Roboto-Regular.ttf)
-  }
+}
+
 :root {
 	--main-color: #0085FF;
 	--black: #000000;
 	--red-error: #E54343;
 	--grey-text: #3D4F58;
-	--white : #FFFFFF;
+	--white: #FFFFFF;
 	--green-button: #08B978;
 	--green-button-hover: #079F68;
 	--background-home: #E4E9F7;
-	--line-color:#D9DDE1;
+	--line-color: #D9DDE1;
 	--slide-nav: #010718;
 	--orange-color: #f89f0f;
 }
+
 :root {
 	--font-main: 'Nunito', sans-serif;
 	--font-roboto: 'Roboto', sans-serif;

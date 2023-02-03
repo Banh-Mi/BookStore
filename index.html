@@ -1,160 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" >
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/css/bootstrap-icons.css">
-	<link rel="stylesheet" href="./assets/css/style.css">
-	<link rel="icon" type="image/x-icon" href="./assets/images/logo_icon.svg">
-	<title>Home Page</title>
-</head>
-<body class="home_page">
-		<nav class="nav">
-			<div class="nav_bar">
-				<i class="bi bi-list menu_icon"></i>
-				<span class="nav_bar-logo"><a href="./index.html">BookStore</a></span>
-				<div class="nav_bar-menu">
-					<div class="header_logo">
-						<div class="logo_mobile">
-							<a href="#">BookStore</a>
-						</div>
-						<i class="bi bi-x-lg close"></i>
-					</div>
-					
-					<ul class="menu_links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Product</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-				</div>
-				<div class="nav_bar-function">
-					<div class="search">
-						<div class="search_toggle">
-							<i class="bi bi-search search_icons"></i>
-							<i class="bi bi-x-lg cancel_icons"></i>
-						</div>
-						<div class="search_input">
-							<input type="text" placeholder="Search">
-							<i class="bi bi-search"></i>
-						</div>
-					</div>
-					<div class="cart">
-						<i class="bi bi-cart"></i>
-						<span class="number_cart" id="count">9+</span>
-					</div>
-					<div class="login_icons">
-						<a href="./login.html">
-							<i class="bi bi-person-circle"></i>
-						</a>
-						<!-- <a href="./login.html" onclick="window.open(this.href, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"> 
-						</a> -->
-					</div>
-				</div>
-			</div>
-		</nav>
-		<div class="slider">
-			<div class="carousel">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo_icon.svg" />
+    <title>Home Page</title>
+  </head>
+  <body class="home_page">
+    <nav class="nav">
+      <div class="nav_bar">
+        <i class="bi bi-list menu_icon"></i>
+        <span class="nav_bar-logo"><a href="./index.html">BookStore</a></span>
+        <div class="nav_bar-menu">
+          <div class="header_logo">
+            <div class="logo_mobile">
+              <a href="#">BookStore</a>
+            </div>
+            <i class="bi bi-x-lg close"></i>
+          </div>
 
-				<div class="carousel-item carousel-item_1">
-					<div class="wrapper">
-						<div class="content">
-							<h1>
-								BookStore - nền tảng đọc sách, nghe sách nói đa nền tảng, đa màn hình, đa thiết bị phù hợp với nhiều đối tượng sử dụng
-							</h1>
-							<div class="button-download">
-								<button class="button-download_ios"><i class="bi bi-apple"></i><a href="#">Cài đặt cho IOS</a></button>
-								<button class="button-download_android"><i class="bi bi-android2"></i><a href="#">Cài đặt cho Android</a></button>
-							</div>
-						</div>
-						<div class="content-img">
-							<img src="./assets/images/anh-3.png" alt="">
-						</div>
-					</div>
-				</div>
-				
-				<div class="carousel-item carousel-item_2">
-					<div class="wrapper">
-						<div class="content">
-							<h1>
-								BookStore - Nền tảng trao đổi mua bán sách an toàn, phù hợp với nhiều nền tảng khác nhau
-							</h1>
-							<ul>
-								<li><img src="./assets/images/tick.svg" alt="" srcset="">An toàn trao đổi và mua bán</li>
-								<li><img src="./assets/images/tick.svg" alt="" srcset="">Nhiều thể loại khác nhau phù hợp với nhiều nhu cầu</li>
-								<li><img src="./assets/images/tick.svg" alt="" srcset="">Tương thích với nhiều nền tảng</li>
-								<li><img src="./assets/images/tick.svg" alt="" srcset="">Không có quảng cáo</li>
-							</ul>
-							<div class="button-download">
-								<button class="button-download_ios"><i class="bi bi-apple"></i><a href="#">Cài đặt cho IOS</a></button>
-								<button class="button-download_android"><i class="bi bi-android2"></i><a href="#">Cài đặt cho Android</a></button>
-							</div>
-						</div>
-						<div class="content-img">
-							<img src="./assets/images/anh.png" alt="">
-						</div>
-					</div>
-				</div>
+          <ul class="menu_links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav_bar-function">
+          <div class="search">
+            <div class="search_toggle">
+              <i class="bi bi-search search_icons"></i>
+              <i class="bi bi-x-lg cancel_icons"></i>
+            </div>
+            <div class="search_input">
+              <input type="text" placeholder="Search" />
+              <i class="bi bi-search"></i>
+            </div>
+          </div>
+          <div class="cart">
+            <i class="bi bi-cart"></i>
+            <span class="number_cart" id="count">9+</span>
+          </div>
+          <div class="login_icons">
+            <a href="./login.html">
+              <i class="bi bi-person-circle"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="slider">
+      <div class="carousel">
+        <div class="carousel-item carousel-item_1">
+          <div class="wrapper">
+            <div class="content">
+              <h1>
+                BookStore - nền tảng đọc sách, nghe sách nói đa nền tảng, đa màn
+                hình, đa thiết bị phù hợp với nhiều đối tượng sử dụng
+              </h1>
+              <div class="button-download">
+                <button class="button-download_ios">
+                  <i class="bi bi-apple"></i><a href="#">Cài đặt cho IOS</a>
+                </button>
+                <button class="button-download_android">
+                  <i class="bi bi-android2"></i
+                  ><a href="#">Cài đặt cho Android</a>
+                </button>
+              </div>
+            </div>
+            <div class="content-img">
+              <img src="./assets/images/anh-3.png" alt="" />
+            </div>
+          </div>
+        </div>
 
-				<div class="carousel-item carousel-item_3">
-					<div class="wrapper">
-					  <div class="content">
-						<h1>Đăng ký BookStore - Cho phép bạn đọc sách, mua bán sách, xem giới thiệu sách và tìm kiếm các tài liệu cần thiết một cách dễ dàng.</h1>
-						<div class="button-download">
-							<button class="button-download_ios"><i class="bi bi-apple"></i><a href="#">Cài đặt cho IOS</a></button>
-							<button class="button-download_android"><i class="bi bi-android2"></i><a href="#">Cài đặt cho Android</a></button>
-						</div>
-					  </div> 
-					  <div class="content-img"> 
-						<img src="./assets/images/anh-2.png" alt="" /> 
-					  </div> 
-					</div>  									  	  	  	  	  	  	  	  	  	  	  	    
-				  </div> 
-			</div>
-		</div>
+        <div class="carousel-item carousel-item_2">
+          <div class="wrapper">
+            <div class="content">
+              <h1>
+                BookStore - Nền tảng trao đổi mua bán sách an toàn, phù hợp với
+                nhiều nền tảng khác nhau
+              </h1>
+              <ul>
+                <li class="content_text">
+                  <img src="./assets/images/tick.svg" alt="" srcset="" />An toàn
+                  trao đổi và mua bán
+                </li>
+                <li class="content_text">
+                  <img src="./assets/images/tick.svg" alt="" srcset="" />Nhiều
+                  thể loại khác nhau phù hợp với nhiều nhu cầu
+                </li>
+                <li class="content_text">
+                  <img src="./assets/images/tick.svg" alt="" srcset="" />Tương
+                  thích với nhiều nền tảng
+                </li>
+                <li class="content_text">
+                  <img src="./assets/images/tick.svg" alt="" srcset="" />Không
+                  có quảng cáo
+                </li>
+              </ul>
+              <div class="button-download">
+                <button class="button-download_ios">
+                  <i class="bi bi-apple"></i><a href="#">Cài đặt cho IOS</a>
+                </button>
+                <button class="button-download_android">
+                  <i class="bi bi-android2"></i
+                  ><a href="#">Cài đặt cho Android</a>
+                </button>
+              </div>
+            </div>
+            <div class="content-img">
+              <img src="./assets/images/anh.png" alt="" />
+            </div>
+          </div>
+        </div>
 
-		<section class="hot_book">
-			<img src="./assets/images/book_room.png" alt="Hàng trăm tựa sách mới và hot nhất" class="background_bookroom">
-			<div class="hot_book-box">
-				<div class="title"><h1>Hàng trăm tựa sách mới và hot nhất</h1></div>
-				<div class="note">Kho sách bản quyền lên đến <b>13.000+</b> cuốn</div>
-				<div class="box_book-content">
-					<div class="box-row">
-						<a href="#" class="book_link"><img src="./assets/images/item1.png" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item2.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item3.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item4.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item5.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item6.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item7.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item8.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item9.jpg" alt="" class="book_item"></a>
-						<a href="#" class="book_link"><img src="./assets/images/item10.jpg" alt="" class="book_item"></a>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div class="carousel-item carousel-item_3">
+          <div class="wrapper">
+            <div class="content">
+              <h1>
+                Đăng ký BookStore - Cho phép bạn đọc sách, mua bán sách, xem
+                giới thiệu sách và tìm kiếm các tài liệu cần thiết một cách dễ
+                dàng.
+              </h1>
+              <div class="button-download">
+                <button class="button-download_ios">
+                  <i class="bi bi-apple"></i><a href="#">Cài đặt cho IOS</a>
+                </button>
+                <button class="button-download_android">
+                  <i class="bi bi-android2"></i
+                  ><a href="#">Cài đặt cho Android</a>
+                </button>
+              </div>
+            </div>
+            <div class="content-img">
+              <img src="./assets/images/anh-2.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<section class="container_box">
-			<div class="title_container">
-				<h1>Đồng hành cùng phát triển</h1>
-			</div>
-			<div class="main_content">
-				<img src="./assets/images/img_main-content.png" alt="">
-				<div class="text_content">
-					<p><b>Công ty Cổ phần Waka</b> (Waka Corporation) chính thức thành lập từ năm 2019, dựa trên cơ sở Nền tảng Xuất bản điện tử Waka ra đời từ tháng 10/2014.</p>
-					<p>
-						Sau hơn 5 năm xây dựng và phát triển, hiện nay, Waka là Nền tảng xuất bản điện tử số một Việt Nam, luôn đi đầu trong lĩnh vực Bản quyền nội dung số, cung cấp các ứng dụng đọc sách điện tử (ebook), nghe sách nói (audiobooks),..
-					</p>	
-					<p>
-						Ngoài ra, Công ty Cổ phần Waka cũng là một trong trong các đối tác tin cậy, cung cấp các dịch vụ đọc sách điện tử, 	truyện tranh trả phí trên các nhà mạng trong và ngoài nước....
-					</p>
-				</div>
-			</div>
-		</section>
-		
-		<script src="./assets/js/home.js"></script>
-		<script src="./assets/js/dragSlider.js"></script>
-</body>
+    <section class="hot_book">
+      <img
+        src="./assets/images/book_room.png"
+        alt="Hàng trăm tựa sách mới và hot nhất"
+        class="background_bookroom"
+      />
+      <div class="hot_book-box">
+        <div class="title"><h1>Hàng trăm tựa sách mới và hot nhất</h1></div>
+        <div class="note">Kho sách bản quyền lên đến <b>13.000+</b> cuốn</div>
+        <div class="box_book-content">
+          <div class="box-row">
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item1.png" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item2.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item3.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item4.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item5.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item6.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item7.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item8.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item9.jpg" alt="" class="book_item"
+            /></a>
+            <a href="#" class="book_link"
+              ><img src="./assets/images/item10.jpg" alt="" class="book_item"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container_box">
+      <div class="title_container">
+        <h1>Đồng hành cùng phát triển</h1>
+      </div>
+      <div class="main_content">
+        <img src="./assets/images/img_main-content.png" alt="" />
+        <div class="right_content">
+          <div class="text_content">
+            <p>
+              <b>Công ty Cổ phần Waka</b> (Waka Corporation) chính thức thành
+              lập từ năm 2019, dựa trên cơ sở Nền tảng Xuất bản điện tử Waka ra
+              đời từ tháng 10/2014.
+            </p>
+            <p>
+              Sau hơn 5 năm xây dựng và phát triển, hiện nay, Waka là Nền tảng
+              xuất bản điện tử số một Việt Nam, luôn đi đầu trong lĩnh vực Bản
+              quyền nội dung số, cung cấp các ứng dụng đọc sách điện tử (ebook),
+              nghe sách nói (audiobooks),..
+            </p>
+            <p>
+              Ngoài ra, Công ty Cổ phần Waka cũng là một trong trong các đối tác
+              tin cậy, cung cấp các dịch vụ đọc sách điện tử, truyện tranh trả
+              phí trên các nhà mạng trong và ngoài nước....
+            </p>
+          </div>
+          <a href="#" class="more">Về Chúng Tôi</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="statistical">
+      <div class="statistical_container">
+        <div class="first_box">
+          <div class="counter_content">3.2M+</div>
+          <span>Users</span>
+        </div>
+        <div class="second_box">
+          <div class="counter_content">13.000+</div>
+          <span>Nội dung số</span>
+        </div>
+        <div class="third_box">
+          <div class="counter_content">4000+</div>
+          <span>Tác giả</span>
+        </div>
+        <div class="fourth_box">
+          <div class="counter_content">100+</div>
+          <span>Đối tác</span>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/home.js"></script>
+    <script src="./assets/js/dragSlider.js"></script>
+    <script src="./assets/js/countNumber.js"></script>
+  </body>
 </html>
-
