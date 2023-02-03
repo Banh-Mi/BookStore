@@ -299,7 +299,7 @@ h6 {
   }
   .home_page .nav_bar-menu {
     position: fixed;
-    height: 100vh;
+    height: 500vh;
     width: 250px;
     left: -100%;
     top: 0;
