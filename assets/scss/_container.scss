@@ -3,27 +3,6 @@
 	max-width: 1030px;
 	margin: 0 auto;
 
-	.title_container {
-		h1 {
-			text-align: center;
-			font-family: var(--font-roboto);
-			letter-spacing: 0.5px;
-			font-size: 30px;
-			position: relative;
-
-			&::before {
-				content: '';
-				left: 48%;
-				position: absolute;
-				height: 10px;
-				width: 50px;
-				border-radius: 5%;
-				bottom: -25px;
-				background-image: url(../images/line.png);
-			}
-		}
-	}
-
 	.main_content {
 		display: grid;
 		grid-template-columns: 50% 50%;
