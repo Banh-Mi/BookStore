@@ -300,7 +300,7 @@ h6 {
   .home_page .nav_bar-menu {
     position: fixed;
     height: 100%;
-    width: 320px;
+    width: 250px;
     left: -100%;
     top: 0;
     padding: 20px;
@@ -399,6 +399,12 @@ h6 {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+}
+.login_left .close_icon {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
 }
 .login_left .close_icon {
   text-align: right;
@@ -515,8 +521,14 @@ h6 {
   .login {
     grid-template-columns: 100%;
   }
-  .login .login_right {
-    display: none;
+  .login_left {
+    padding: 10px 25px;
+  }
+  .login_left a {
+    font-size: 20px;
+  }
+  .login_left-form div[class^=form] div[class^=input] {
+    font-size: 25px;
   }
   .login_left-form a[class^=btn] {
     font-size: 20px;
@@ -525,19 +537,40 @@ h6 {
     width: 35px;
   }
   .login_left-form .creat_account {
-    font-size: 14px;
+    font-size: 15px;
+  }
+  .login_left-form .creat_account a {
+    font-size: 15px;
   }
   .login_left-form .form_button-next {
     width: 100%;
     margin: 10px 0px;
   }
+  .login_right {
+    display: none;
+  }
 }
 @media only screen and (max-width: 300px) {
-  .login_left-form a[class^=btn] {
+  .login_left {
+    padding: 10px 15px;
+  }
+  .login_left .close_icon {
+    font-size: 30px;
+  }
+  .login_left-form div[class^=form] div[class^=input] {
+    font-size: 20px;
+  }
+  .login_left-form a[class^=btn-] {
     font-size: 16px;
   }
-  .login_left-form a[class^=btn] img {
-    width: 40px;
+  .login_left-form a[class^=btn-] img {
+    width: 35px;
+  }
+  .login_left-form .creat_account {
+    font-size: 13px;
+  }
+  .login_left-form .creat_account a {
+    font-size: 13px;
   }
 }
 .notification {

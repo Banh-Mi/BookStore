@@ -12,6 +12,11 @@
 		overflow-y: auto;
 
 		.close_icon {
+			width: fit-content;
+			margin-left: auto;
+		}
+
+		.close_icon {
 			text-align: right;
 			font-size: 2.5rem;
 			color: var(--black);
@@ -148,42 +153,84 @@
 	.login {
 		grid-template-columns: 100%;
 
-		.login_right {
+		&_left {
+			padding: 10px 25px;
+
+			a {
+				font-size: 20px;
+			}
+
+			&-form {
+				div[class^='form'] {
+					div[class^='input'] {
+						font-size: 25px;
+					}
+				}
+
+				a[class^='btn'] {
+					font-size: 20px;
+
+					img {
+						width: 35px;
+
+					}
+				}
+
+				.creat_account {
+					font-size: 15px;
+
+					a {
+						font-size: 15px;
+					}
+				}
+
+				.form_button-next {
+					width: 100%;
+					margin: 10px 0px;
+				}
+			}
+		}
+
+		&_right {
 			display: none;
 		}
 
-		&_left-form {
-			a[class^='btn'] {
-				font-size: 20px;
-
-				img {
-					width: 35px;
-
-				}
-			}
-
-			.creat_account {
-				font-size: 14px;
-			}
-
-			.form_button-next {
-				width: 100%;
-				margin: 10px 0px;
-			}
-		}
 	}
 }
 
 @media only screen and (max-width: 300px) {
 	.login {
-		&_left-form {
-			a[class^='btn'] {
-				font-size: 16px;
+		&_left {
+			padding: 10px 15px;
 
-				img {
-					width: 40px;
+			.close_icon {
+				font-size: 30px;
+			}
+
+			&-form {
+				div[class^='form'] {
+					div[class^='input'] {
+						font-size: 20px;
+					}
+				}
+
+				a[class^='btn-'] {
+					font-size: 16px;
+
+					img {
+						width: 35px;
+					}
+				}
+
+				.creat_account {
+					font-size: 13px;
+
+					a {
+						font-size: 13px;
+					}
 				}
 			}
+
 		}
 	}
 }
